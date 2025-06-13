@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympic Medal Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        #topCountries {
+            margin: 20px auto;
+            display: block;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+        .country-bar {
+            fill: #1E90FF;
+        }
+        .country-label, .country-name {
+            font-size: 12px;
+            fill: #333;
+        }
+        .country-name {
+            text-anchor: end;
+        }
+        #controls {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        #slider {
+            width: 80%;
+            max-width: 800px;
+            margin: 10px 0;
+        }
+        #yearContainer {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="athletes.html">Athletes</a></li>
+            <li><a href="comparemedals.html">Medals by Year</a></li>
+        </ul>
+    </nav>
+    <h1>Top 10 countries by total medals by competition</h1>
+    <svg id="topCountries"></svg>
+    <div id="controls">
+        <button id="startButton">Start</button>
+        <button id="stopButton" disabled>Stop</button>
+    </div>
+    <input type="range" id="slider" min="1896" max="2016" value="1896" step="4">
+    <div id="yearContainer">
+        <span>Year: </span><span id="yearLabel">1896</span>
+    </div>
+    <script src="comparemedals.js"></script>
+</body>
+</html>

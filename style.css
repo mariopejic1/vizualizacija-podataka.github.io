@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #f5f7fa;
+  --gray-light: #e2e8f0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  margin: 10px;
+}
+
+nav {
+  background-color: #000;
+  padding: 10px 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#tooltip.hidden {
+  display: none;
+}
+
+#hostCitySelector {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#citySelect {
+  padding: 5px;
+  font-size: 14px;
+}
+
+#detailsContainer {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+#detailsContainer h3 {
+  margin: 10px 0;
+}
+
+#map {
+  opacity: 0;
+}
+
+#map .country {
+  stroke: #999;
+  stroke-width: 0.5;
+  cursor: pointer;
+}
+
+#map .country:hover {
+  fill: #1E90FF;
+}
+
+#map .city circle {
+  fill: #FF0000;
+  stroke: #000;
+  stroke-width: 0.5;
+  cursor: pointer;
+}
+
+#map .city text {
+  font-size: 2.5px;
+  fill: #000;
+  pointer-events: none;
+}
+
+#barChartContainer {
+  text-align: center;
+  margin: 20px 0;
+  min-width: 300px;
+}
+
+#barChartContainer label {
+  font-size: 14px;
+  color: #333;
+  margin-right: 10px;
+}
+
+#sort-countries {
+  padding: 5px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid var(--gray-light);
+  border-radius: 4px;
+  background-color: var(--bg);
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#sort-countries:focus {
+  outline: none;
+  border-color: #1E90FF;
+}
+
+#barChart {
+  opacity: 0;
+  width: 100%;
+}
+
+#countryChartsContainer {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#countryChartsContainer h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+#medalsByYearChart .line {
+  fill: none;
+  stroke: #FFD700;
+  stroke-width: 2;
+}
+
+#medalsByYearChart .dot {
+  fill: red;
+}
+
+#topAthletesChart .bar-gold,
+#topDisciplinesChart .bar-gold {
+  fill: #FFD700;
+}
+
+#topAthletesChart .bar-silver,
+#topDisciplinesChart .bar-silver {
+  fill: #C0C0C0;
+}
+
+#topAthletesChart .bar-bronze,
+#topDisciplinesChart .bar-bronze {
+  fill: #CD7F32;
+}
+
+#topAthletesChart .bar-label,
+#topDisciplinesChart .bar-label {
+  font-size: 10px;
+  fill: #333;
+  text-anchor: end;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.axis {
+  font-size: 10px;
+  fill: #333;
+}
+
+.axis path,
+.axis line {
+  stroke: #333;
+}
+
+.bar .bar-text {
+  font-size: 10px;
+  font-weight: bold;
+  fill: #fff;
+  text-anchor: middle;
+}
+
+svg {
+  background-color: var(--bg);
+  border: 1px solid var(--gray-light);
+  margin: 2px;
+}
+
+#hostCityWrapper {
+  display: none;
+}
+
+.country {
+  pointer-events: auto;
+}
